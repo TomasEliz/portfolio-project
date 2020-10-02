@@ -1,0 +1,78 @@
+// Mobile
+@media (max-width: 1024px) {
+  .nav-lg {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .info-ul {
+    grid-template-columns: repeat(3, 25rem);
+
+    .letter-container {
+      .letter-s1 {
+        background-color: $darkslategray;
+      }
+      .letter-k {
+        background-color: $darkcyan;
+      }
+      .letter-i {
+        background-color: $darkslategray;
+      }
+      .letter-l1 {
+        background-color: $darkcyan;
+      }
+      .letter-l2 {
+        background-color: $darkslategray;
+      }
+      .letter-s2 {
+        background-color: $darkcyan;
+      }
+    }
+  }
+  .info-ul li:first-child {
+    grid-column: 1 / 4;
+  }
+}
+
+// Desktop
+@media (min-width: 1024px) {
+  .nav-sm {
+    display: none;
+  }
+  .info-ul {
+    display: flex;
+
+    &-li {
+      width: 25rem;
+    }
+  }
+
+  .info-ul li:first-child {
+    max-width: 25rem;
+    border: 2px solid $color-secondary;
+  }
+  .thumbnails {
+    grid-template-columns: repeat(3, 1fr);
+    width: 60%;
+
+    &-card {
+      height: 30rem;
+
+      &-overlay {
+        height: 30rem;
+      }
+    }
+
+    .winebar {
+      grid-column: 3;
+      grid-row: 2;
+    }
+  }
+
+  .contact {
+    fieldset {
+      width: 40%;
+    }
+  }
+}

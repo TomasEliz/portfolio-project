@@ -1,0 +1,24 @@
+@import 'variables';
+@import 'base';
+@import 'mixin';
+
+// UI components
+@import 'main-header';
+@import 'navbar';
+@import 'info';
+@import 'projects';
+@import 'contact';
+@import 'footer';
+
+// Responsive layout
+@import 'media';
+
+i {
+    font-size: 12rem;    
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}

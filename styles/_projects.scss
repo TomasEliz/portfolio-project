@@ -1,0 +1,110 @@
+.projects-header {
+  @include section-header;
+
+  & a {
+    padding: 1rem 2rem;
+    color: black;
+  }
+
+  & a:hover {
+    @include header-link-on-hover;
+  }
+
+  .fa-angle-double-up {
+    font-size: 3rem;
+  }
+}
+
+// Projects container
+.thumbnails {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 80%;
+  margin: 15rem auto 20rem auto;
+
+  &-card {
+    width: 100%;
+    height: 20rem;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &-overlay {
+      width: 100%;
+      height: 20rem;
+      position: relative;
+      bottom: 200%;
+
+      & a {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4rem 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      &-text {
+        width: fit-content;
+        color: $red;
+        border: 1px solid $red;
+        font-size: 2rem;
+        font-weight: 900;
+        padding: 0.5rem 1rem;
+        text-align: center;
+        z-index: 20;
+      }
+
+      & p:last-child {
+        font-size: 1.6rem;
+      }
+
+      &-text:hover {
+        background-color: $red;
+        color: $color-light;
+        transition: 0.3s;
+      }
+    }
+
+    &-overlay:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.6);
+      position: relative;
+      top: 100%;
+      z-index: 10;
+    }
+  }
+
+  // Project images
+  .codefest {
+    background-image: url(../images/project-images/festivalofcode.PNG);
+  }
+  .bookstore {
+    background-image: url(../images/project-images/bookstore.jpg);
+  }
+  .infoweb {
+    background-image: url(../images/project-images/oybin.jpg);
+  }
+  .musicfest {
+    background-image: url(../images/project-images/musicfest.jpg);
+  }
+  .travelblog {
+    background-image: url(../images/project-images/faroe.jpeg);
+  }
+  .winebar {
+    background-image: url(../images/project-images/restaurant.jpg);
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  // Slide
+  &-card:hover .thumbnails-card-overlay {
+    transform: translateY(100%);
+    transition: 0.5s ease-in-out;
+  }
+}

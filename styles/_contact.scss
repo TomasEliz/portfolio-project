@@ -1,0 +1,94 @@
+.contact-header {
+  display: flex;
+  height: 20rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+  top: -2.5rem;
+
+  & a {
+    @include flex-center;
+    background-color: $color-dark;
+    color: $color-light;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5px;
+  }
+
+  & a:hover {
+    @include header-link-on-hover;
+    background-color: $black;
+  }
+  .fa-angle-double-up {
+    font-size: 3rem;
+  }
+}
+.contact {
+  background-color: $color-secondary;
+  color: $color-primary;
+  font-size: 4rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem 12rem 1rem;
+
+  & fieldset {
+    width: 70%;
+    border: none;
+    border-top: 1px solid darkgoldenrod;
+
+    & legend {
+      padding: 1rem 2rem;
+      margin-left: 2rem;
+      color: darkcyan;
+      font-size: 1.6rem;
+    }
+
+    & form {
+      position: relative;
+
+      & input {
+        @include form-element;
+        @include input-ta;
+        border-bottom: 1px solid $color-dark;
+      }
+
+      & textarea {
+        @include form-element;
+        @include input-ta;
+        height: 20rem;
+      }
+
+      & button[type="submit"] {
+        @include form-element;
+        font-size: 2rem;
+        padding: 1.5rem 3.5rem;
+        font-weight: bold;
+        border: 0;
+        margin-top: 0.5rem;
+        position: absolute;
+        right: 0;
+
+        &:hover {
+          background-color: $darkcyan;
+          color: $color-dark;
+          transition: 0.3s;
+          cursor: pointer;
+        }
+      }
+
+      ::-webkit-input-placeholder {
+        color: darkcyan;
+      }
+
+      & input:focus,
+      textarea:focus {
+        border: 1px solid darkgoldenrod;
+        outline: none;
+      }
+    }
+  }
+}
